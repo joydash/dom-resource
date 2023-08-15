@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Valuable</title>
+</head>
+<body>
+    <!-- add event value is the ...............
+    1) focus 2) blur 3)keypress 4) key up 5)mouseMove 6)mouseOver etc......... -->
+
+    <h1>Added Event listner value #keypress</h1>
+    <input id="text-field" type="text">
+
+    <script>
+        document.getElementById('text-field').addEventListener('keypress', function(event){
+            console.log(event.target.value)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Added By the Event Listener</title>
+
+    <!-- added tailwind and daisy UI  -->
+    
+<!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+    <h1>Added Your Valuable Comment Here</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, dolorem! Laboriosam repellat aut voluptas provident odit, aperiam fugiat. Praesentium magni similique eligendi, adipisci nam delectus, quod culpa maxime fugiat esse nostrum eius alias quam ducimus, non doloremque. Ad cum animi illum, cupiditate explicabo, distinctio tempore sint, qui voluptate rerum accusantium?</p>
+        <p>Fuga quo adipisci tenetur ea ab veniam explicabo voluptatibus reiciendis doloribus tempora nostrum tempore, quas maxime alias modi assumenda neque sequi harum distinctio delectus, veritatis dolore? Neque blanditiis incidunt doloremque aspernatur animi quibusdam at non quaerat illo voluptate temporibus autem, labore eligendi quo veritatis, numquam id? Et ab nostrum voluptate!</p>
+        <p>Iste necessitatibus eaque consequatur. Illo ab nisi, ex odio quidem possimus voluptatum aliquid deleniti, doloremque ullam itaque necessitatibus laudantium reiciendis aliquam consequatur aperiam molestias. Accusantium, ipsam odio voluptate, harum maxime eveniet accusamus, ullam facere culpa maiores doloremque iusto! Dolorem tempore reprehenderit dolor autem aliquam assumenda laudantium earum a, molestiae odio.</p>
+        <p>Illo repudiandae distinctio eveniet, saepe fugiat consequuntur cumque, enim veritatis quos expedita sed? Est eveniet atque cumque magnam asperiores nemo sunt quam ipsa deserunt, iusto explicabo ducimus, voluptate earum nostrum, vel aut pariatur repellendus esse itaque quia quos. Voluptatem cumque ipsum eveniet, sapiente perspiciatis commodi suscipit sit libero odit voluptatum!</p>
+        <p>Aperiam, vero molestiae sit veniam perferendis ut odio nihil animi tempora expedita amet qui! Veritatis quaerat incidunt reprehenderit non exercitationem necessitatibus quidem consectetur temporibus facilis, rem officia neque architecto? Deserunt quod tenetur suscipit, nisi maxime nesciunt aperiam ea culpa neque magni facere necessitatibus cumque cupiditate, illo doloremque! Reprehenderit, libero rerum!</p>
+    </div>
+    <br>
+    <br>
+    <textarea name="" id="added-comment" cols="60" rows="5"></textarea> <br> <br>
+    <!-- <input type="text" name="" id="added-comment"> -->
+    
+    <button id="post-button">Post Here</button>
+
+    <script>
+        // step 1 add event lister to the post button 
+        document.getElementById('post-button').addEventListener('click', function(){
+            // console.log(post-button);
+
+               // step 2 get the comment inside the textarea 
+        const commentArea = document.getElementById('added-comment');
+        console.log(commentArea);
+        const newComment = commentArea.value;
+        console.log(newComment);
+
+        // step 3 set the comment inside the comment container 
+        const commentContainer = document.getElementById('comment-container');
+        const p = document.createElement('p');
+        p.innerText = newComment;
+        commentContainer.appendChild(p);
+
+        // step 4 vanished the text area input
+        commentArea.value = " ";
+        })
+
+     
+    </script>
+</body>
+</html>
